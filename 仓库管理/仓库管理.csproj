@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85F46133-FE25-402D-8AF9-7DE60B6369DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>仓库管理</RootNamespace>
+    <AssemblyName>仓库管理</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.LiteArrayCtrlLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AxInterop.LiteArrayCtrlLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.LiteArrayCtrlLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.LiteArrayCtrlLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CryptHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabeledCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabeledCheckBox.Designer.cs">
+      <DependentUpon>LabeledCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabeledTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabeledTextBox.Designer.cs">
+      <DependentUpon>LabeledTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="DataManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManager.Designer.cs">
+      <DependentUpon>DataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仓库管理窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仓库管理窗口.Designer.cs">
+      <DependentUpon>仓库管理窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabeledComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabeledComboBox.Designer.cs">
+      <DependentUpon>LabeledComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="旧\仓库管理窗口（旧）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="旧\仓库管理窗口（旧）.Designer.cs">
+      <DependentUpon>仓库管理窗口（旧）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库修改窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库修改窗口.Designer.cs">
+      <DependentUpon>入库修改窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库历史查询窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库历史查询窗口.Designer.cs">
+      <DependentUpon>入库历史查询窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库登记窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库登记窗口.Designer.cs">
+      <DependentUpon>入库登记窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出库修改窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库修改窗口.Designer.cs">
+      <DependentUpon>出库修改窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出库历史查询窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库历史查询窗口.Designer.cs">
+      <DependentUpon>出库历史查询窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出库登记窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库登记窗口.Designer.cs">
+      <DependentUpon>出库登记窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地点管理窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地点管理窗口.Designer.cs">
+      <DependentUpon>地点管理窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="备件管理窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="备件管理窗口.Designer.cs">
+      <DependentUpon>备件管理窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="旧\备件管理窗口（旧）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="旧\备件管理窗口（旧）.Designer.cs">
+      <DependentUpon>备件管理窗口（旧）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="图片管理窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="图片管理窗口.Designer.cs">
+      <DependentUpon>图片管理窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拍照窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拍照窗口.Designer.cs">
+      <DependentUpon>拍照窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="权限管理窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="权限管理窗口.Designer.cs">
+      <DependentUpon>权限管理窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="旧\用户管理窗口（旧）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="旧\用户管理窗口（旧）.Designer.cs">
+      <DependentUpon>用户管理窗口（旧）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户管理窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户管理窗口.Designer.cs">
+      <DependentUpon>用户管理窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="登录对话框.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="登录对话框.Designer.cs">
+      <DependentUpon>登录对话框.cs</DependentUpon>
+    </Compile>
+    <Compile Include="货架管理窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="货架管理窗口.Designer.cs">
+      <DependentUpon>货架管理窗口.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabeledCheckBox.resx">
+      <DependentUpon>LabeledCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabeledComboBox.resx">
+      <DependentUpon>LabeledComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabeledTextBox.resx">
+      <DependentUpon>LabeledTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DataManager.resx">
+      <DependentUpon>DataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仓库管理窗口.resx">
+      <DependentUpon>仓库管理窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="旧\仓库管理窗口（旧）.resx">
+      <DependentUpon>仓库管理窗口（旧）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="入库修改窗口.resx">
+      <DependentUpon>入库修改窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="入库历史查询窗口.resx">
+      <DependentUpon>入库历史查询窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="入库登记窗口.resx">
+      <DependentUpon>入库登记窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库修改窗口.resx">
+      <DependentUpon>出库修改窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库历史查询窗口.resx">
+      <DependentUpon>出库历史查询窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库登记窗口.resx">
+      <DependentUpon>出库登记窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地点管理窗口.resx">
+      <DependentUpon>地点管理窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="备件管理窗口.resx">
+      <DependentUpon>备件管理窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="旧\备件管理窗口（旧）.resx">
+      <DependentUpon>备件管理窗口（旧）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="图片管理窗口.resx">
+      <DependentUpon>图片管理窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拍照窗口.resx">
+      <DependentUpon>拍照窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="权限管理窗口.resx">
+      <DependentUpon>权限管理窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="旧\用户管理窗口（旧）.resx">
+      <DependentUpon>用户管理窗口（旧）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户管理窗口.resx">
+      <DependentUpon>用户管理窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="登录对话框.resx">
+      <DependentUpon>登录对话框.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="货架管理窗口.resx">
+      <DependentUpon>货架管理窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
